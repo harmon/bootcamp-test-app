@@ -1,0 +1,375 @@
+  [1m[36m (15.4ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (19.0ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+
+Started GET "/" for 10.0.2.2 at 2016-06-02 21:51:25 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+Mysql2::Error (Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)):
+  mysql2 (0.4.4) lib/mysql2/client.rb:87:in `connect'
+  mysql2 (0.4.4) lib/mysql2/client.rb:87:in `initialize'
+  activerecord (4.2.6) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.2.6) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /home/vagrant/.rbenv/versions/2.3.1/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /home/vagrant/.rbenv/versions/2.3.1/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.6) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.6) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.6) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.6) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/vagrant/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/vagrant/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/vagrant/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/vagrant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /home/vagrant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/vagrant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/vagrant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2016-06-02 21:53:48 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/vagrant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (0.8ms)
+Completed 200 OK in 8ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (7.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateBootcamps (20160603015419)
+  [1m[35m (16.4ms)[0m  CREATE TABLE `bootcamps` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `dates` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160603015419')
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'lab-2_development'
+  AND fk.table_name = 'bootcamps'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `bootcamps`
+
+
+Started GET "/" for 10.0.2.2 at 2016-06-02 21:55:05 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by BootcampsController#index as HTML
+  [1m[35mBootcamp Load (0.3ms)[0m  SELECT `bootcamps`.* FROM `bootcamps`
+  Rendered bootcamps/index.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 897ms (Views: 894.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 10.0.2.2 at 2016-06-02 21:55:06 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-3ee61a2c2f1dedd0ad1a88e8d4882e89fe68a8755c0ca6cb912a21ba43413f2e.css?body=1" for 10.0.2.2 at 2016-06-02 21:55:06 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootcamps.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.2.2 at 2016-06-02 21:55:06 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 10.0.2.2 at 2016-06-02 21:55:06 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 10.0.2.2 at 2016-06-02 21:55:06 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootcamps.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.2.2 at 2016-06-02 21:55:06 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for 10.0.2.2 at 2016-06-02 21:55:06 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 10.0.2.2 at 2016-06-02 21:55:56 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BootcampsController#index as HTML
+  [1m[36mBootcamp Load (0.7ms)[0m  [1mSELECT `bootcamps`.* FROM `bootcamps`[0m
+  Rendered bootcamps/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/scaffolds.self-3ee61a2c2f1dedd0ad1a88e8d4882e89fe68a8755c0ca6cb912a21ba43413f2e.css?body=1" for 10.0.2.2 at 2016-06-02 21:55:57 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootcamps.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.2.2 at 2016-06-02 21:55:57 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 10.0.2.2 at 2016-06-02 21:55:57 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 10.0.2.2 at 2016-06-02 21:55:57 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootcamps.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.2.2 at 2016-06-02 21:55:57 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 10.0.2.2 at 2016-06-02 21:55:57 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for 10.0.2.2 at 2016-06-02 21:55:57 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/bootcamps/new" for 10.0.2.2 at 2016-06-02 21:55:57 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BootcampsController#new as HTML
+  Rendered bootcamps/_form.html.erb (31.1ms)
+  Rendered bootcamps/new.html.erb within layouts/application (36.1ms)
+Completed 200 OK in 55ms (Views: 49.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/bootcamps/new" for 10.0.2.2 at 2016-06-02 21:56:40 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BootcampsController#new as HTML
+  Rendered bootcamps/_form.html.erb (3.1ms)
+  Rendered bootcamps/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootcamps.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.2.2 at 2016-06-02 21:56:40 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 10.0.2.2 at 2016-06-02 21:56:40 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 10.0.2.2 at 2016-06-02 21:56:40 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 10.0.2.2 at 2016-06-02 21:56:40 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-3ee61a2c2f1dedd0ad1a88e8d4882e89fe68a8755c0ca6cb912a21ba43413f2e.css?body=1" for 10.0.2.2 at 2016-06-02 21:56:40 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootcamps.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.2.2 at 2016-06-02 21:56:40 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for 10.0.2.2 at 2016-06-02 21:56:40 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/bootcamps" for 10.0.2.2 at 2016-06-02 21:58:15 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BootcampsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tckhtmyw0qNSBrALH1N2/HGJz0EyE+gxDuCxPkYnUdlh7kQCccw4r7NunGb2+U+0HsLXjJeX17EKKL7oZdEZyA==", "bootcamp"=>{"name"=>"Yahoo!", "description"=>"<a href=\"//www.google.com\">Yahoo!</a>", "dates"=>""}, "commit"=>"Create Bootcamp"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `bootcamps` (`name`, `description`, `dates`, `created_at`, `updated_at`) VALUES ('Yahoo!', '<a href=\"//www.google.com\">Yahoo!</a>', '', '2016-06-03 01:58:15', '2016-06-03 01:58:15')[0m
+  [1m[35m (1.5ms)[0m  COMMIT
+Redirected to http://localhost:7000/bootcamps/1
+Completed 302 Found in 8ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/bootcamps/1" for 10.0.2.2 at 2016-06-02 21:58:15 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BootcampsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBootcamp Load (0.7ms)[0m  [1mSELECT  `bootcamps`.* FROM `bootcamps` WHERE `bootcamps`.`id` = 1 LIMIT 1[0m
+  Rendered bootcamps/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 34ms (Views: 21.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/bootcamps/1/edit" for 10.0.2.2 at 2016-06-02 21:58:31 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BootcampsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBootcamp Load (0.5ms)[0m  SELECT  `bootcamps`.* FROM `bootcamps` WHERE `bootcamps`.`id` = 1 LIMIT 1
+  Rendered bootcamps/_form.html.erb (2.6ms)
+  Rendered bootcamps/edit.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bootcamps" for 10.0.2.2 at 2016-06-02 22:03:54 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BootcampsController#index as HTML
+  [1m[36mBootcamp Load (0.4ms)[0m  [1mSELECT `bootcamps`.* FROM `bootcamps`[0m
+  Rendered bootcamps/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 39ms (Views: 32.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/bootcamps?utf8=%E2%9C%93&search=%25%27+AND+WHERE+1%3D1%3B&commit=Search+Bootcamps" for 10.0.2.2 at 2016-06-02 22:05:35 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BootcampsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"%' AND WHERE 1=1;", "commit"=>"Search Bootcamps"}
+  [1m[35mBootcamp Load (1.6ms)[0m  SELECT `bootcamps`.* FROM `bootcamps` WHERE (name LIKE '%%' AND WHERE 1=1;%')
+  Rendered bootcamps/index.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.6ms)
+
+ActionView::Template::Error (Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE 1=1;%')' at line 1: SELECT `bootcamps`.* FROM `bootcamps` WHERE (name LIKE '%%' AND WHERE 1=1;%')):
+    20:   </thead>
+    21: 
+    22:   <tbody>
+    23:     <% @bootcamps.each do |bootcamp| %>
+    24:       <tr>
+    25:         <td><%= bootcamp.name %></td>
+    26:         <td><%= bootcamp.description %></td>
+  app/views/bootcamps/index.html.erb:23:in `_app_views_bootcamps_index_html_erb__960240085009872256_70356352128920'
+
+
+  Rendered /home/vagrant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /home/vagrant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /home/vagrant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/vagrant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.5ms)
+
+
+Started GET "/bootcamps?utf8=%E2%9C%93&search=%25%27+AND+WHERE+1%3D1+OR+name+LIKE+%27%25&commit=Search+Bootcamps" for 10.0.2.2 at 2016-06-02 22:06:01 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BootcampsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"%' AND WHERE 1=1 OR name LIKE '%", "commit"=>"Search Bootcamps"}
+  [1m[36mBootcamp Load (1.3ms)[0m  [1mSELECT `bootcamps`.* FROM `bootcamps` WHERE (name LIKE '%%' AND WHERE 1=1 OR name LIKE '%%')[0m
+  Rendered bootcamps/index.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.3ms)
+
+ActionView::Template::Error (Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE 1=1 OR name LIKE '%%')' at line 1: SELECT `bootcamps`.* FROM `bootcamps` WHERE (name LIKE '%%' AND WHERE 1=1 OR name LIKE '%%')):
+    20:   </thead>
+    21: 
+    22:   <tbody>
+    23:     <% @bootcamps.each do |bootcamp| %>
+    24:       <tr>
+    25:         <td><%= bootcamp.name %></td>
+    26:         <td><%= bootcamp.description %></td>
+  app/views/bootcamps/index.html.erb:23:in `_app_views_bootcamps_index_html_erb__960240085009872256_70356352128920'
+
+
+  Rendered /home/vagrant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /home/vagrant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /home/vagrant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/vagrant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.1ms)
+
+
+Started GET "/bootcamps?utf8=%E2%9C%93&search=%25%27+OR+WHERE+1%3D1+OR+name+LIKE+%27%25&commit=Search+Bootcamps" for 10.0.2.2 at 2016-06-02 22:06:11 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BootcampsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"%' OR WHERE 1=1 OR name LIKE '%", "commit"=>"Search Bootcamps"}
+  [1m[35mBootcamp Load (1.6ms)[0m  SELECT `bootcamps`.* FROM `bootcamps` WHERE (name LIKE '%%' OR WHERE 1=1 OR name LIKE '%%')
+  Rendered bootcamps/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.6ms)
+
+ActionView::Template::Error (Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE 1=1 OR name LIKE '%%')' at line 1: SELECT `bootcamps`.* FROM `bootcamps` WHERE (name LIKE '%%' OR WHERE 1=1 OR name LIKE '%%')):
+    20:   </thead>
+    21: 
+    22:   <tbody>
+    23:     <% @bootcamps.each do |bootcamp| %>
+    24:       <tr>
+    25:         <td><%= bootcamp.name %></td>
+    26:         <td><%= bootcamp.description %></td>
+  app/views/bootcamps/index.html.erb:23:in `_app_views_bootcamps_index_html_erb__960240085009872256_70356352128920'
+
+
+  Rendered /home/vagrant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.4ms)
+  Rendered /home/vagrant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /home/vagrant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/vagrant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.3ms)
+
+
+Started GET "/bootcamps?utf8=%E2%9C%93&search=%25%27+OR+1%3D1+OR+name+LIKE+%27%25&commit=Search+Bootcamps" for 10.0.2.2 at 2016-06-02 22:06:15 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BootcampsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"%' OR 1=1 OR name LIKE '%", "commit"=>"Search Bootcamps"}
+  [1m[36mBootcamp Load (1.0ms)[0m  [1mSELECT `bootcamps`.* FROM `bootcamps` WHERE (name LIKE '%%' OR 1=1 OR name LIKE '%%')[0m
+  Rendered bootcamps/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/bootcamps?utf8=%E2%9C%93&search=&commit=Search+Bootcamps" for 10.0.2.2 at 2016-06-02 22:06:24 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BootcampsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"", "commit"=>"Search Bootcamps"}
+  [1m[35mBootcamp Load (0.8ms)[0m  SELECT `bootcamps`.* FROM `bootcamps`
+  Rendered bootcamps/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/bootcamps?utf8=%E2%9C%93&search=&commit=Search+Bootcamps" for 10.0.2.2 at 2016-06-02 22:07:08 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BootcampsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"", "commit"=>"Search Bootcamps"}
+  [1m[36mBootcamp Load (0.8ms)[0m  [1mSELECT `bootcamps`.* FROM `bootcamps`[0m
+  Rendered bootcamps/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/bootcamps.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.2.2 at 2016-06-02 22:07:08 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 10.0.2.2 at 2016-06-02 22:07:08 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for 10.0.2.2 at 2016-06-02 22:07:08 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 10.0.2.2 at 2016-06-02 22:07:08 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-3ee61a2c2f1dedd0ad1a88e8d4882e89fe68a8755c0ca6cb912a21ba43413f2e.css?body=1" for 10.0.2.2 at 2016-06-02 22:07:08 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 10.0.2.2 at 2016-06-02 22:07:08 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootcamps.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.2.2 at 2016-06-02 22:07:08 -0400
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
